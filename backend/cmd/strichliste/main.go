@@ -13,7 +13,11 @@ var frontendDir embed.FS
 
 func main() {
 	var persistence api.Persistence = inmemory.NewInMemoryPersistence()
-	router := api.NewRouter(persistence)
+
+
+
+
+	                    router := api.NewRouter(persistence)
 
 	// serve the frontend
 	router.Use(static.Serve("", static.EmbedFolder(frontendDir, "frontendDist")))
